@@ -1,3 +1,5 @@
+/* We will use almost the same properties that were introduced in the original project files to give the same feeling of the website but with some few tweaks */
+
 /* Preloaded google font
 font-family: 'Otomanopee One', sans-serif;
 */
@@ -9,18 +11,17 @@ body {
     background: linear-gradient(315deg, rgba(35,213,205,1) 0%, rgba(15,51,103,1) 89%);
     color: white;
     font-family: 'Courier New', monospace;
-    margin: 4em;
 }
 
 h1 {
     font-family: 'Otomanopee One', sans-serif;
     font-size: 2em;
-    margin: 1em 0.5rem;
+    margin: 2em 0.5rem;
 }
 @media only screen and (min-width: 50em){
     h1 {
         font-size: 5em;
-        margin: 1em 0.5em;
+        margin: 2em 0.5em;
     }
 }
 
@@ -31,7 +32,8 @@ span {
 }
 
 h2 {
-    margin: 2em 0em;
+    font-size: xx-large;
+    margin: 2.5em 0em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -39,9 +41,10 @@ p {
     line-height: 2em;
     font-weight: 600;
     font-size: larger;
+    margin: 0.5em;
 }
 
-/*Layout*/
+/* Layout */
 
 main {
     margin: 10vh 1.5em 10vh;
@@ -56,3 +59,170 @@ section {
     min-height: 70vh;
 }
 
+/* Navigation menu */
+
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navbar__menu li {
+    display: inline-block;
+    margin: 0em 0.25em;
+}
+
+.navbar__menu .menu__link {
+    display: inline-block;
+    padding: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar__menu .menu__link:hover {
+    background: rgb(35,213,205);
+    background: radial-gradient(circle, rgba(35,213,205,1) 0%, rgba(15,51,103,1) 85%);
+    color: #fff;
+    transition: ease 0.5s all;
+    border-radius: 0.5em;
+}
+
+/* Header */
+
+.page__header {
+    background: rgb(15,51,103);
+    background: linear-gradient(270deg, rgba(15,51,103,1) 60%, rgba(35,213,205,1) 100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Footer */
+
+.page__footer {
+    background: rgb(15,51,103);
+    padding: 1em;
+    color: #fff;
+}
+
+/* Landing container */
+
+.landing__container {
+    padding: 0.5em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .landing__container {
+        max-width: 70em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+/* The animated circles that were used in the original project file */
+
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    background: rgb(35,213,205);
+    background: radial-gradient(circle, rgba(35,213,205,1) 0%, rgba(15,51,103,1) 85%);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgb(35,213,205);
+    background: radial-gradient(circle, rgba(35,213,205,1) 0%, rgba(15,51,103,1) 85%);
+    position: absolute;
+    right: 10vh;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(odd) .landing__container::after {
+    content: '';
+    background: rgb(35,213,205);
+    background: radial-gradient(circle, rgba(35,213,205,1) 0%, rgba(15,51,103,1) 85%);
+    position: absolute;
+    right: 10vh;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::after {
+    content: '';
+    background: rgb(35,213,205);
+    background: radial-gradient(circle, rgba(35,213,205,1) 0%, rgba(15,51,103,1) 85%);
+    position: absolute;
+    left: 10vh;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+/* Active styles */
+
+section.your-active-class {
+    background: rgb(15,51,103,0.6);
+    background: linear-gradient(0deg, rgba(35,213,205,0.2) 0%, rgba(15,51,103,0.3) 50%, rgba(35,213,205,0.2) 100%);
+    border: 1px solid #00e6e6;
+    border-radius: 5em;
+}
+
+section.your-active-class .landing__container::before {
+    opacity: 1;
+    animation: rotate 8s linear 0s infinite normal;
+}
+
+section.your-active-class .landing__container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite reverse;
+}
+
+.active__link {
+    background: rgb(35,213,205);
+    background: radial-gradient(circle, rgba(35,213,205,0.6) 0%, rgba(15,51,103,0.6) 85%);
+    color: #fff;
+    transition: ease 0.5s all;
+    border-radius: 0.5em;
+}
+
+/* Key Frames for the animated circles */
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1.5em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1.5em) 
+		           rotate(-360deg);
+	}
+}
