@@ -1,6 +1,6 @@
 /*
 In this file we'll be using some techniques that weren't introduced in the course but learned through research
-like template literals and arrow functions
+like (template literals, arrow functions, ternary operator, ...)
 */
 
 // First things first. Selecting the page sections and adding them to the navigation menu.
@@ -61,8 +61,7 @@ navBar.addEventListener("click", (listItem) => {
     }
 });
 
-// Now to hide the navigation menu while scrolling. plus adding hover to view,
-// Plus adding the option of hover over the top of the page to view it again without the need of scrolling.
+// Now to hide the navigation menu while  not scrolling.
 
 let navigationMenu = document.querySelector(".navbar__menu");
 
@@ -73,7 +72,13 @@ document.onscroll = () => {
     timer = setTimeout(() => {
         navigationMenu.style.display = "none";
     }, 5000);
+
+    // This line is related to the scroll to top button at line: 109
+    // Using the ternary operator which was implemented in ES6 instead of a normal if statement
+    window.scrollY > 1000 ? (scrollButton.style.display = "block") : (scrollButton.style.display = "none");
 };
+
+// Adding a bonus option to hover over the top of the page to view the navigation bar again without the need of scrolling.
 
 document.onmousemove = (mousePosition) => {
     let timer;
@@ -104,3 +109,17 @@ buttons.forEach(button => {
 
 // Adding a scroll to top button
 
+let scrollButton = document.querySelector(".top");
+
+scrollButton.addEventListener("click", () => {
+    // Using a scroll object to get a smooth behavior
+    let scrollToTop = {
+        left: 0,
+        top: 0,
+        behavior: "smooth"
+    }
+    window.scrollTo(scrollToTop);
+});
+
+// We need to use an (onscoll) event listener but we already have one at line: 68.
+// To avoid duplication the excution line was placed at line: 78.
