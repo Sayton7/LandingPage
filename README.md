@@ -1,5 +1,7 @@
 # Landing Page Project
 
+This project is implementing the basic skills of HTML, CSS and JavaScript to build a beautiful interactive website.
+
 ## Table of Contents
 
 * [Instructions](#instructions)
