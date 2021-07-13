@@ -25,16 +25,20 @@ h1 {
     }
 }
 
-span {
+button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    cursor: pointer;
+    font-weight: 1000;
+    font-size: xx-large;
     border-radius: 0.5em;
     border: 2px solid #00e6e6;
-    padding: .5em;
+    background-color: transparent;
+    padding: 0.5em;
 }
 
 h2 {
-    font-size: xx-large;
     margin: 2.5em 0em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 p {
