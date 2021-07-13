@@ -87,5 +87,20 @@ document.onmousemove = (mousePosition) => {
     }
 };
 
-// Then adding the scroll to top button.
+// Then, making the sections collapsible;
+
+let buttons = document.querySelectorAll(".collapse");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        let coll = document.querySelector(`[data-coll="${button.id}"]`);
+        if (coll.style.display === "block") {
+            coll.style.display = "none";
+        } else {
+            coll.style.display = "block"
+        };
+    });
+});
+
+// Adding a scroll to top button
 
