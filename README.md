@@ -11,4 +11,4 @@ This project is implementing the basic skills of HTML, CSS and JavaScript to bui
 ## Github repository
 
 I've tried updating my github repository after my daily sessions of working on the project so that you might follow some changes history.
-To view the repo please follow the [link] (https://github.com/Sayton7/landingPage)
+To view the repo please follow the link: [link](https://github.com/Sayton7/landingPage)
