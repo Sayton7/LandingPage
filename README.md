@@ -15,13 +15,14 @@ To view the repo please follow the link [Landing Page](https://github.com/Sayton
 
 ## Fixed Notes
 1- The current section is not getting highlighted on low-resolution devices such as iPhone X
-* Added a different CSS style to lower the margin on lowe-resolution devices.
-* Lowered the IntersectionObserver to 20% instead of 70%.
+* Added a different CSS style to lower the sections' margin on lowe-resolution devices.
+* Lowered the IntersectionObserver ratio to 20% instead of 70%.
 * Modified the threshold of the IntersectionObserver to fire at 25% and 75%
-* (This seemed to fix the issue viewed in my developer tools on chrome)
+* (This fix the issue viewed in my developer tools on chrome)
 
 2- You could use a forEach() function here instead of for loop.
-* Switched from for of loop to forEach() on line 28
+* Switched from the (for of) loop to forEach() on line 28.
+* Added a document fragment to append list items to then appending the fragment to the navigation menu for the sake of performance (avoid more reflows and repaints).
 
 3- You could divide your Javascript into different functions in order to make it reusable.
 * Couldn't really make it happen as almost all of the functions weren't used more than once in my code.
