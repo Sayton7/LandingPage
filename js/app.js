@@ -25,11 +25,13 @@ const navBar = document.querySelector("#navbar__list");
 //selecting all sections in the page.
 const sections = document.querySelectorAll("section");
 //adding all sections a list items to the navigation menu.
+let frag = document.createDocumentFragment();
 sections.forEach(section => {
     const listItem = document.createElement('li');
     listItem.innerHTML = `<a href="#${section.id}" class="menu__link" data-nav="${section.id}">${section.dataset.nav}</a>`;
-    navBar.appendChild(listItem);
+    frag.appendChild(listItem);
 });
+navBar.appendChild(frag);
 
 // 2- It should be clear which section is being viewed while scrolling through the page.
 // a- Add an active state to your navigation items when a section is in the viewport.
@@ -76,7 +78,7 @@ document.onscroll = () => {
     timer = setTimeout(() => {
         navigationMenu.style.display = "none";
     }, 5000);
-    // This line is related to the scroll to top button at line: 109
+    // This line is related to the scroll to top button at line: 100
     // Using the ternary operator which was implemented in ES6 instead of a normal if statement
     window.scrollY > 1000 ? (scrollButton.style.display = "block") : (scrollButton.style.display = "none");
 };
@@ -108,8 +110,8 @@ scrollButton.addEventListener("click", () => {
     }
     window.scrollTo(scrollToTop);
 });
-// We need to use an (onscoll) event listener but we already have one at line: 72.
-// To avoid duplication the excution line was placed at line: 81.
+// We need to use an (onscoll) event listener but we already have one at line: 74.
+// To avoid duplication the excution line was placed at line: 83.
 
 // e- Make sections collapsible.
 
