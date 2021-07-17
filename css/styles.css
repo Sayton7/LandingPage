@@ -25,6 +25,16 @@ h1 {
     }
 }
 
+section {
+    margin: 10em;
+}
+
+@media only screen and (max-width: 30em) {
+    section {
+        margin: 2em 0em;
+    }
+}
+
 button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
@@ -136,8 +146,8 @@ main {
 
 @media only screen and (min-width: 35em){
     .landing__container {
-        max-width: 70em;
-        padding: 2em 4em;
+        max-width: 85em;
+        padding: 1em 2em;
     }
 }
 
