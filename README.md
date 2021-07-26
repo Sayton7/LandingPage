@@ -11,7 +11,7 @@ This project is implementing the basic skills of HTML, CSS and JavaScript to bui
 ## Github Repository
 
 I've tried updating my github repository after my daily sessions of working on the project so that you might follow some changes history.
-To view the repo please follow the link [Landing Page](https://github.com/Sayton7/landingPage)
+To view the repo please follow the link [Landing Page](https://github.com/Sayton7/LandingPage)
 
 ## Fixed Notes
 1- The current section is not getting highlighted on low-resolution devices such as iPhone X
